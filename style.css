@@ -1,0 +1,91 @@
+/* Genel Stiller */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc;
+    color: #3d2c1e;
+}
+
+.navbar {
+    background-color: #3d2c1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.navbar-brand {
+    color: #ffd700 !important;
+    font-weight: bold; /* Başlığı kalın yap */
+}
+
+.nav-link {
+    color: #ffd700 !important;
+}
+
+/* Sayfanın içeriği navbar altında kalmaması için */
+body {
+    padding-top: 56px;
+    margin: 0;
+}
+
+/* Slider Stilleri */
+#sliderCarousel {
+    width: 100vw;
+    height: 55vh;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.carousel-item img {
+    width: 100vw;
+    height: 55vh;
+    object-fit: cover;
+    margin-top: 0;
+}
+
+/* Ürün Kartları */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #3d2c1e;
+    font-weight: bold;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    color: white;
+}
+
+/* Hakkımızda ve İletişim Bölümleri */
+#hakkimizda, #iletisim {
+    background-color: #f8f0e3;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #3d2c1e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}
