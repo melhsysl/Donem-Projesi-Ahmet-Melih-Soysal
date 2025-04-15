@@ -1,57 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
 /* Genel Stiller */
 html, body {
     width: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff8dc;
-    color: #3d2c1e;
+    background-color: #fff8dc;  /* Sayfa arka plan rengi */
+    color: #3d2c1e;  /* Metin rengi */
 }
 
+/* Navbar */
 .navbar {
-    background-color: #3d2c1e;
+    background-color: #fff8dc;  /* Navbar arka plan rengini sayfa rengiyle aynı yapıyoruz */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     transition: top 0.3s;
+    border-bottom: 1px solid #d3d3d3; /* Açık gri renk */
 }
 
+.navbar-brand:hover {
+    color: #3d2c1e !important;  /* Hoverda koyu kahverengi renge dönsün */
+    transform: scale(1.1);  /* Hoverda başlık biraz büyüsün */
+}  
 .navbar-brand {
-    color: #ffd700 !important;
-    font-weight: bold; /* Başlığı kalın yap */
+    font-family: 'Poppins', sans-serif; /* Modern bir yazı tipi */
+    font-weight: 600;  /* Kalın yapalım */
+    color: #893901 !important;  /* Altın sarısı renk */
+    font-size: 1.8rem;  /* Başlık boyutunu büyütüyoruz */
+    text-transform: uppercase;  /* Başlık harflerini büyük yapalım */
+    letter-spacing: 2px;  /* Harfler arasında boşluk bırakmak */
+    transition: color 0.3s ease, transform 0.3s ease;  /* Hover efekti için geçiş efekti ekleyelim */
 }
-
+.nav-link:hover {
+    background-color: #ffd700; /* Hoverda arka plan rengi değişir */
+    color: #3d2c1e !important; /* Yazı rengi değişir */
+}
 .nav-link {
-    color: #ffd700 !important;
+    display: inline-block; /* Linklerin tüm alanını kapsar */
+    padding: 10px 20px; /* Linklerin boyutunu ayarlıyoruz */
+    color: #5d5d5d !important; /* Yazı rengi */
+    text-align: center; /* Yazıyı ortalar */
+    text-decoration: none; /* Alt çizgi kaldır */
+    border-radius: 5px; /* Kenarlara yuvarlaklık verir */
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+    font-weight:900;
 }
+/* Slider Stilleri */
+/* Slider Stilleri */
+#slider {
+    width: 100%; /* Yatayda tam genişlik */
+    height: 50vh; /* Yükseklik sayfanın yarısı kadar */
+    overflow: hidden;
+    margin-top: 0; /* Navbar ile boşluk olmaması için margin-top'u sıfırladık */
+  }
+  
+  .carousel-item img {
+    width: 100%;  /* Yatayda tam genişlik */
+    height: 100%; /* Yükseklik tam olsun */
+    object-fit: contain;  /* Görselin oranı korunarak doldurulacak */
+    
+  }
+  
+  /* Slider Kontrolleri */
+  .carousel-control-prev, .carousel-control-next {
+    background-color: #d0d000;  /* Koyu sarı renk */
+    border-radius: 50%;  /* Yuvarlak yapıyoruz */
+    width: 35px;  /* Tuşların genişliği */
+    height: 35px;  /* Tuşların yüksekliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;  /* İnce beyaz kenarlık */
+    position: absolute;  /* Pozisyonu absolute yapıyoruz */
+    top: 50%;  /* Yatayda tam ortalama */
+    transform: translateY(-50%);  /* Dikeyde tam ortalama */
+    transition: transform 0.3s ease;  /* Sadece büyüme efekti */
+    opacity: 1;  /* Opaklık tamamen görünür olsun */
+  }
+  .carousel-control-prev {
+    left: 30px;  /* Sol tarafa biraz boşluk bırakıyoruz */
+    
+  }
+  .carousel-control-next {
+    right: 30px;  /* Sağ tarafa biraz daha fazla boşluk bırakıyoruz */
+    
+  }
+  
+  .carousel-control-prev:hover {
+    transform: translateY(-50%) scale(1.1);  /* Hoverda biraz büyüme efekti */
+    opacity: 1;  /* Hoverda opaklık değişmesin */
+  }
+  .carousel-control-next:hover{
+    transform: translateY(-50%) scale(1.1);  /* Hoverda biraz büyüme efekti */
+    opacity: 1;  /* Hoverda opaklık değişmesin */
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    transform: scale(0.6);  /* Ok ikonlarının boyutunu daha da küçültüyoruz */
 
+  }
+  .carousel-control-prev-icon::before, .carousel-control-next-icon::before {
+    font-size: 12px;  /* Ok ikonları içindeki okları küçültüyoruz */
+    font-weight: bold;  /* Ok ikonlarını kalın yapıyoruz */
+  }
+  /* Slider Mobil uyumlu */
+  @media (max-width: 767px) {
+    #slider {
+      height: 40vh; /* Mobilde yükseklik biraz daha az olabilir */
+    }
+  }
 /* Sayfanın içeriği navbar altında kalmaması için */
 body {
     padding-top: 56px;
-    margin: 0;
-}
-
-/* Slider Stilleri */
-#sliderCarousel {
-    width: 100vw;
-    height: 55vh;
-    overflow: hidden;
-    margin-top: 0;
-}
-
-.carousel-item img {
-    width: 100vw;
-    height: 55vh;
-    object-fit: cover;
-    margin-top: 0;
 }
 
 /* Ürün Kartları */
 .card {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card-title {
@@ -71,7 +146,6 @@ body {
 
 .btn-whatsapp:hover {
     background-color: #1ebe5d;
-    color: white;
 }
 
 /* Hakkımızda ve İletişim Bölümleri */
@@ -82,10 +156,18 @@ body {
     margin-top: 30px;
 }
 
+/* Footer */
 footer {
     background-color: #3d2c1e;
     color: white;
     padding: 15px 0;
     text-align: center;
     margin-top: 30px;
+}
+
+/* Responsif Tasarım */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
 }
