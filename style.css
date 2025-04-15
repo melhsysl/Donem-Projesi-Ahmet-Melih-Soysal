@@ -2,6 +2,22 @@
 
 
 /* Genel Stiller */
+.top-banner {
+    width: 100%;
+    background-color: #ffd700; /* Sarı */
+    color: #000;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 1040; /* Navbar'dan 1 tık yukarıda */
+  }
+  
+  .navbar {
+    margin-top: 32px; /* Banner yüksekliği kadar aşağı itiyoruz */
+  }
 html, body {
     width: 100%;
     margin: 0;
@@ -50,8 +66,25 @@ html, body {
     transition: background-color 0.3s ease; /* Geçiş efekti */
     font-weight:900;
 }
+.top-banner {
+    width: 100%;
+    background-color: #ffd700; /* Parlak sarı */
+    color: #000; /* Siyah yazı */
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 1051; /* Navbar'dan daha yukarıda olacak */
+  }
+  
+  body {
+    padding-top: 40px; /* Üst bandın alanı kadar boşluk bırak, navbar kaymasın */
+  }
+  
 /* Slider Stilleri */
-/* Slider Stilleri */
+
 #slider {
     width: 100%; /* Yatayda tam genişlik */
     height: 50vh; /* Yükseklik sayfanın yarısı kadar */
