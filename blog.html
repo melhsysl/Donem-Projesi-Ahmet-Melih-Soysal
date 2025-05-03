@@ -1,120 +1,277 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bilgi Köşesi - MELİH</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arıcılık Bilgisi | Bal Arısı</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
-    <div class="top-banner">
-        <span class="banner-text" id="text1">🚚 KARGO ÜCRETSİZ! Türkiye’nin her yerine hızlı teslimat! 💛</span>
-        <span class="banner-text" id="text2" style="display:none;">Ürünlerimizi güvenle satın alabilirsiniz!</span>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="blog-hero">
+            <div class="blog-hero-overlay">
+                <div class="blog-hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Arıcılık Bilgisi</h1>
+                    <p class="lead">Arıların dünyasına dair faydalı bilgiler</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Content Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Blog Post 1 -->
+                        <div class="blog-card fade-in" data-category="aricilik">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <img src="images/arı.jfif" alt="Arıların Büyüleyici Dünyası" class="blog-image">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="blog-content">
+                                        <h3 class="blog-title">Arıların Büyüleyici Dünyası</h3>
+                                        <div class="blog-meta">
+                                            <span><i class="bi bi-calendar"></i> 15 Nisan 2025</span>
+                                            <span><i class="bi bi-person"></i> Ahmet Bal</span>
+                                        </div>
+                                        <p class="blog-description">Arı kolonilerinin nasıl çalıştığını, kraliçe arı, işçi arılar ve erkek arılar arasındaki görev dağılımını keşfedin. Arıların inanılmaz dünyasını yakından tanıyın.</p>
+                                        <a href="javascript:filterBlogPosts('aricilik')" class="blog-tag">Arıcılık</a>
+                                        <a href="javascript:filterBlogPosts('aricilik')" class="blog-tag">Arı Kolonisi</a>
+                                        <div class="mt-3">
+                                            <a href="blog-posts/arilar-dunyasi.html" class="btn btn-primary">Devamını Oku</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 2 -->
+                        <div class="blog-card fade-in" data-category="bal">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <img src="images/bal3.png" alt="Bal Çeşitleri ve Faydaları" class="blog-image">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="blog-content">
+                                        <h3 class="blog-title">Bal Çeşitleri ve Faydaları</h3>
+                                        <div class="blog-meta">
+                                            <span><i class="bi bi-calendar"></i> 28 Mart 2025</span>
+                                            <span><i class="bi bi-person"></i> Zeynep Çiçek</span>
+                                        </div>
+                                        <p class="blog-description">Çiçek balı, kestane balı, çam balı, akasya balı ve daha birçok bal türünün kendine has özellikleri ve sağlığa olan faydaları hakkında detaylı bilgiler.</p>
+                                        <a href="javascript:filterBlogPosts('bal')" class="blog-tag">Bal</a>
+                                        <a href="javascript:filterBlogPosts('bal')" class="blog-tag">Sağlık</a>
+                                        <div class="mt-3">
+                                            <a href="blog-posts/bal-cesitleri.html" class="btn btn-primary">Devamını Oku</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 3 -->
+                        <div class="blog-card fade-in" data-category="cevre">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <img src="images/arı2.jfif" alt="Sürdürülebilir Arıcılık" class="blog-image">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="blog-content">
+                                        <h3 class="blog-title">Sürdürülebilir Arıcılık</h3>
+                                        <div class="blog-meta">
+                                            <span><i class="bi bi-calendar"></i> 10 Mart 2025</span>
+                                            <span><i class="bi bi-person"></i> Mehmet Arı</span>
+                                        </div>
+                                        <p class="blog-description">Arı popülasyonlarını korumak ve sürdürülebilir arıcılık uygulamaları hakkında ipuçları. Küresel ısınma ve tarım ilaçlarının arılar üzerindeki etkisi.</p>
+                                        <a href="javascript:filterBlogPosts('cevre')" class="blog-tag">Sürdürülebilirlik</a>
+                                        <a href="javascript:filterBlogPosts('cevre')" class="blog-tag">Çevre</a>
+                                        <div class="mt-3">
+                                            <a href="blog-posts/surdurulebilir-aricilik.html" class="btn btn-primary">Devamını Oku</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 4 -->
+                        <div class="blog-card fade-in" data-category="urunler">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <img src="images/propolis.jfif" alt="Arı Ürünleri ve Kullanım Alanları" class="blog-image">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="blog-content">
+                                        <h3 class="blog-title">Arı Ürünleri ve Kullanım Alanları</h3>
+                                        <div class="blog-meta">
+                                            <span><i class="bi bi-calendar"></i> 22 Şubat 2025</span>
+                                            <span><i class="bi bi-person"></i> Ayşe Doğan</span>
+                                        </div>
+                                        <p class="blog-description">Bal, polen, propolis, arı sütü ve balmumunun günlük yaşamda ve alternatif tıpta kullanım alanları hakkında bilgiler ve tarifler.</p>
+                                        <a href="javascript:filterBlogPosts('urunler')" class="blog-tag">Arı Ürünleri</a>
+                                        <a href="javascript:filterBlogPosts('urunler')" class="blog-tag">Alternatif Tıp</a>
+                                        <div class="mt-3">
+                                            <a href="blog-posts/ari-urunleri.html" class="btn btn-primary">Devamını Oku</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <nav aria-label="Blog sayfalama" class="mt-5">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-chevron-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+                            <!-- Search -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="sidebar-title">Arama</h5>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="blog-search" placeholder="Blog yazılarında ara...">
+                                        <button class="btn btn-primary" type="button" onclick="searchBlogPosts()"><i class="bi bi-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Categories -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="sidebar-title">Kategoriler</h5>
+                                    <ul class="categories-list">
+                                        <li><a href="#" class="category-link active" data-category="all" onclick="filterBlogPosts('all')">Tüm Kategoriler <span class="badge float-end">8</span></a></li>
+                                        <li><a href="#" class="category-link" data-category="aricilik" onclick="filterBlogPosts('aricilik')">Arıcılık <span class="badge float-end">3</span></a></li>
+                                        <li><a href="#" class="category-link" data-category="bal" onclick="filterBlogPosts('bal')">Bal Çeşitleri <span class="badge float-end">2</span></a></li>
+                                        <li><a href="#" class="category-link" data-category="urunler" onclick="filterBlogPosts('urunler')">Arı Ürünleri <span class="badge float-end">1</span></a></li>
+                                        <li><a href="#" class="category-link" data-category="cevre" onclick="filterBlogPosts('cevre')">Çevre ve Sürdürülebilirlik <span class="badge float-end">2</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Recent Posts -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="sidebar-title">Son Yazılar</h5>
+                                    <div class="recent-post">
+                                        <img src="images/arı.jfif" alt="Arıların Dünyası" class="recent-post-image">
+                                        <div>
+                                            <a href="#" class="recent-post-title">Arıların Büyüleyici Dünyası</a>
+                                            <p class="recent-post-date">15 Nisan 2025</p>
+                                        </div>
+                                    </div>
+                                    <div class="recent-post">
+                                        <img src="images/bal.jfif" alt="Bal Çeşitleri" class="recent-post-image">
+                                        <div>
+                                            <a href="#" class="recent-post-title">Bal Çeşitleri ve Faydaları</a>
+                                            <p class="recent-post-date">28 Mart 2025</p>
+                                        </div>
+                                    </div>
+                                    <div class="recent-post">
+                                        <img src="images/arı2.jfif" alt="Sürdürülebilir Arıcılık" class="recent-post-image">
+                                        <div>
+                                            <a href="#" class="recent-post-title">Sürdürülebilir Arıcılık</a>
+                                            <p class="recent-post-date">10 Mart 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tags -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="sidebar-title">Etiketler</h5>
+                                    <div>
+                                        <a href="javascript:filterBlogPosts('aricilik')" class="blog-tag">Arıcılık</a>
+                                        <a href="javascript:filterBlogPosts('bal')" class="blog-tag">Bal</a>
+                                        <a href="#" class="blog-tag">Propolis</a>
+                                        <a href="#" class="blog-tag">Polen</a>
+                                        <a href="#" class="blog-tag">Arı Sütü</a>
+                                        <a href="javascript:filterBlogPosts('bal')" class="blog-tag">Sağlık</a>
+                                        <a href="javascript:filterBlogPosts('cevre')" class="blog-tag">Sürdürülebilirlik</a>
+                                        <a href="javascript:filterBlogPosts('cevre')" class="blog-tag">Çevre</a>
+                                        <a href="#" class="blog-tag">Doğal Yaşam</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Subscribe Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8 text-center">
+                        <h2 class="mb-4">Bültenimize Abone Olun</h2>
+                        <p class="text-muted mb-4">Arıcılık dünyasındaki son gelişmeleri, bal ve arı ürünleri hakkında bilgileri, sağlık tavsiyelerini ilk siz öğrenmek için bültenimize abone olun.</p>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="E-posta adresiniz" aria-label="E-posta adresiniz">
+                            <button class="btn btn-primary" type="button">Abone Ol</button>
+                        </div>
+                        <small class="text-muted">Gizliliğinize saygı duyuyoruz. E-posta adresinizi asla paylaşmayacağız.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-5" style="background-color: var(--primary-color);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <h2 class="text-dark mb-3">Sorularınız mı var?</h2>
+                        <p class="text-dark mb-0">Arıcılık, bal veya diğer arı ürünleri hakkında sorularınız için bizimle iletişime geçin.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-dark btn-lg">İletişime Geç</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <i class="fa-solid fa-bug"></i> Melih & Bee
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="urunler.html">Ürünler</a></li>
-          <li class="nav-item"><a class="nav-link" href="uretım.html">Üretim Süreci</a></li>
-          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-          <li class="nav-item"><a class="nav-link" href="yorumlar.html">Yorumlar</a></li>
-          <li class="nav-item"><a class="nav-link" href="teslimat.html">Kargo & Teslimat</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Bilgi Köşesi</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Blog Yazıları -->
-  <section id="blog" class="container my-5">
-    <h2 class="text-center">Bilgi Köşesi</h2>
-    <p class="text-center">Arıcılık ve doğal arı ürünleri hakkında bilmeniz gereken her şeyi buradan öğrenebilirsiniz.</p>
-
-    <div class="row">
-      <!-- Yazı 1 -->
-      <div class="col-md-6">
-        <div class="card">
-          <img src="resimler/arı.jfif" class="card-img-top" alt="Arıcılık Nedir?">
-          <div class="card-body">
-            <h5 class="card-title">Arıcılık Nedir?</h5>
-            <p class="card-text">Arıcılık, bal üretimi ve arıların bakımıyla ilgilenen bir tarım faaliyetidir. Arıların ekosistemdeki önemi ve faydaları hakkında daha fazla bilgi edinin.</p>
-            <a href="#" class="btn btn-primary">Devamını Oku</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Yazı 2 -->
-      <div class="col-md-6">
-        <div class="card">
-          <img src="resimler/propolis.jfif" class="card-img-top" alt="Bal Üretimi">
-          <div class="card-body">
-            <h5 class="card-title">Bal Nasıl Üretilir?</h5>
-            <p class="card-text">Bal, arıların çiçeklerden topladığı nektardan elde edilir. Bal üretiminin süreci, kullanılan yöntemler ve balın faydaları hakkında bilgi alın.</p>
-            <a href="#" class="btn btn-primary">Devamını Oku</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-4">
-      <!-- Yazı 3 -->
-      <div class="col-md-6">
-        <div class="card">
-          <img src="resimler/bal.jfif" class="card-img-top" alt="Propolisin Faydaları">
-          <div class="card-body">
-            <h5 class="card-title">Propolisin Faydaları</h5>
-            <p class="card-text">Propolis, arıların bitkilerden topladığı doğal bir madde olup bağışıklık sistemini güçlendirir. Propolisin sağlık üzerindeki faydaları hakkında daha fazla bilgi edinin.</p>
-            <a href="#" class="btn btn-primary">Devamını Oku</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Yazı 4 -->
-      <div class="col-md-6">
-        <div class="card">
-          <img src="resimler/arı2.jfif" class="card-img-top" alt="Arı Sütünün Faydaları">
-          <div class="card-body">
-            <h5 class="card-title">Arı Sütünün Faydaları</h5>
-            <p class="card-text">Arı sütü, arıların kraliçe arılarına besin sağlamak için ürettikleri bir madde olup, yüksek besin değerine sahiptir. Arı sütünün faydalarını öğrenin.</p>
-            <a href="#" class="btn btn-primary">Devamını Oku</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Doğal Arı Ürünleri. Tüm Hakları Saklıdır.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    let currentText = 1;
-
-    setInterval(() => {
-        if (currentText === 1) {
-            document.getElementById('text1').style.display = 'none';
-            document.getElementById('text2').style.display = 'block';
-            currentText = 2;
-        } else {
-            document.getElementById('text1').style.display = 'block';
-            document.getElementById('text2').style.display = 'none';
-            currentText = 1;
-        }
-    }, 3000); // 3000ms = 3 saniye
-</script>
+    
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 </html>

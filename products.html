@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünlerimiz | Bal Arısı</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="products-hero">
+            <div class="products-hero-overlay">
+                <div class="products-hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Ürünlerimiz</h1>
+                    <p class="lead">Doğanın mucizesi arı ürünleri</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Arı Ürünlerimiz</h2>
+                <p class="text-center mb-5">Arılarımızın özenle ürettiği, doğal ve katkısız ürünlerimizi keşfedin. Tüm ürünlerimiz doğallığını koruyacak şekilde üretilmekte ve paketlenmektedir.</p>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons mb-4">
+                    <button class="btn filter-btn active" data-filter="all">Tümü</button>
+                    <button class="btn filter-btn" data-filter="bal">Bal Çeşitleri</button>
+                    <button class="btn filter-btn" data-filter="polen">Polen</button>
+                    <button class="btn filter-btn" data-filter="propolis">Propolis</button>
+                    <button class="btn filter-btn" data-filter="diger">Diğer Ürünler</button>
+                </div>
+                
+                <div class="row">
+                    <!-- Product 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4 product-item fade-in" data-category="bal">
+                        <div class="product-card">
+                            <div class="position-relative">
+                                <img src="images/bal.jfif" alt="Çiçek Balı" class="img-fluid product-image">
+                                <span class="product-category">Bal</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="product-title">Çiçek Balı</h4>
+                                <p class="product-description">Dağ yamaçlarındaki çiçeklerden toplanan doğal ve saf çiçek balı. Hafif ve aromatik tadıyla kahvaltıların vazgeçilmezi.</p>
+                                <ul class="product-benefits">
+                                    <li>Bağışıklık sistemini güçlendirir</li>
+                                    <li>Antioksidan özelliği vardır</li>
+                                    <li>Doğal enerji kaynağıdır</li>
+                                </ul>
+                                <button class="btn btn-primary mt-3" onclick="showProductDetails('bal1')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4 product-item fade-in" data-category="bal">
+                        <div class="product-card">
+                            <div class="position-relative">
+                                <img src="images/bal4.jpg" alt="Kestane Balı" class="img-fluid product-image">
+                                <span class="product-category">Bal</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="product-title">Kestane Balı</h4>
+                                <p class="product-description">Kestane ormanlarından elde edilen, keskin aroması ve koyu rengiyle öne çıkan şifalı bal.</p>
+                                <ul class="product-benefits">
+                                    <li>Solunum yolları rahatsızlıklarına iyi gelir</li>
+                                    <li>Sindirim sistemini düzenler</li>
+                                    <li>Yüksek mineral içeriğine sahiptir</li>
+                                </ul>
+                                <button class="btn btn-primary mt-3" onclick="showProductDetails('bal2')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4 product-item fade-in" data-category="bal">
+                        <div class="product-card">
+                            <div class="position-relative">
+                                <img src="images/bal3.png" alt="Çam Balı" class="img-fluid product-image">
+                                <span class="product-category">Bal</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="product-title">Çam Balı</h4>
+                                <p class="product-description">Çam ormanlarından elde edilen, kendine has aroması ve tadıyla damakları şenlendiren bal.</p>
+                                <ul class="product-benefits">
+                                    <li>Doğal antibiyotik özelliği vardır</li>
+                                    <li>Boğaz ağrılarına iyi gelir</li>
+                                    <li>Antioksidan ve antimikrobiyal özelliktedir</li>
+                                </ul>
+                                <button class="btn btn-primary mt-3" onclick="showProductDetails('bal3')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4 product-item fade-in" data-category="polen">
+                        <div class="product-card">
+                            <div class="position-relative">
+                                <img src="images/arısütü.jfif" alt="Çiçek Poleni" class="img-fluid product-image">
+                                <span class="product-category">Polen</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="product-title">Çiçek Poleni</h4>
+                                <p class="product-description">Arılar tarafından toplanan protein açısından zengin, taze çiçek poleni. Doğal gıda takviyesi.</p>
+                                <ul class="product-benefits">
+                                    <li>Protein ve aminoasit kaynağıdır</li>
+                                    <li>B vitaminleri açısından zengindir</li>
+                                    <li>Enerji seviyesini artırır</li>
+                                </ul>
+                                <button class="btn btn-primary mt-3" onclick="showProductDetails('polen1')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4 product-item fade-in" data-category="propolis">
+                        <div class="product-card">
+                            <div class="position-relative">
+                                <img src="images/propolis.jfif" alt="Propolis" class="img-fluid product-image">
+                                <span class="product-category">Propolis</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="product-title">Propolis Özütü</h4>
+                                <p class="product-description">Arıların kovanlarını korumak için topladığı doğal reçine. Güçlü antibakteriyel ve antiviral özelliklere sahiptir.</p>
+                                <ul class="product-benefits">
+                                    <li>Bağışıklık sistemini güçlendirir</li>
+                                    <li>Enfeksiyonlarla mücadele eder</li>
+                                    <li>Antioksidan özelliği vardır</li>
+                                </ul>
+                                <button class="btn btn-primary mt-3" onclick="showProductDetails('propolis1')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4 product-item fade-in" data-category="diger">
+                        <div class="product-card">
+                            <div class="position-relative">
+                                <img src="images/arı2.jfif" alt="Arı Sütü" class="img-fluid product-image">
+                                <span class="product-category">Diğer</span>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="product-title">Arı Sütü</h4>
+                                <p class="product-description">Kraliçe arıların beslenmesinde kullanılan, besin değeri yüksek arı sütü. Doğal gıda takviyesi.</p>
+                                <ul class="product-benefits">
+                                    <li>Yüksek protein ve vitamin içerir</li>
+                                    <li>Hücre yenilenmesini destekler</li>
+                                    <li>Cilt sağlığını korur</li>
+                                </ul>
+                                <button class="btn btn-primary mt-3" onclick="showProductDetails('arisut1')">Detayları Gör</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Categories Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title">Ürün Kategorilerimiz</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-cup-fill"></i>
+                                </div>
+                                <h4>Bal Çeşitleri</h4>
+                                <p class="text-muted">Çiçek balı, kestane balı, çam balı, akasya balı gibi çeşitli bal türleri.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary" onclick="filterProducts('bal')">Balları Keşfet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-flower1"></i>
+                                </div>
+                                <h4>Polen</h4>
+                                <p class="text-muted">Arıların çiçeklerden topladığı, protein açısından zengin polen ürünleri.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary" onclick="filterProducts('polen')">Polenleri Keşfet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-shield-plus"></i>
+                                </div>
+                                <h4>Propolis</h4>
+                                <p class="text-muted">Arıların kovanlarını mikroplardan korumak için topladığı reçineli madde.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary" onclick="filterProducts('propolis')">Propolisi Keşfet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-droplet"></i>
+                                </div>
+                                <h4>Diğer Ürünler</h4>
+                                <p class="text-muted">Arı sütü, balmumu ve diğer arı ürünleri.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary" onclick="filterProducts('diger')">Diğer Ürünleri Keşfet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Arı Ürünlerinin Faydaları</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 fade-in">
+                        <img src="images/ballll.png" alt="Arı Ürünleri Faydaları" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-lg-6 fade-in">
+                        <div class="accordion" id="accordionBenefits">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Balın Faydaları
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBenefits">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Doğal antibiyotik özelliği vardır</li>
+                                            <li>Bağışıklık sistemini güçlendirir</li>
+                                            <li>Boğaz ağrılarını hafifletir</li>
+                                            <li>Sindirim sistemini düzenler</li>
+                                            <li>Cilt yaralarının iyileşmesini hızlandırır</li>
+                                            <li>Antioksidan özellikleri vardır</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Polenin Faydaları
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionBenefits">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Protein, aminoasit ve vitamin açısından zengindir</li>
+                                            <li>Metabolizmayı hızlandırır</li>
+                                            <li>Fiziksel performansı artırır</li>
+                                            <li>Prostat sorunlarını önlemeye yardımcı olur</li>
+                                            <li>Beyin fonksiyonlarını destekler</li>
+                                            <li>Yaşlanma karşıtı etkilere sahiptir</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Propolisin Faydaları
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionBenefits">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Güçlü antibakteriyel ve antiviral özelliklere sahiptir</li>
+                                            <li>Enfeksiyonlarla mücadele eder</li>
+                                            <li>Diş ve diş eti sağlığını korur</li>
+                                            <li>Cilt sağlığını destekler</li>
+                                            <li>Bağışıklık sistemini güçlendirir</li>
+                                            <li>İltihap önleyici özelliklere sahiptir</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Arı Sütünün Faydaları
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionBenefits">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Hücre yenilenmesini destekler</li>
+                                            <li>Cilt sağlığını korur ve yaşlanma belirtilerini azaltır</li>
+                                            <li>Hormonal dengeyi destekler</li>
+                                            <li>Enerji seviyesini artırır</li>
+                                            <li>Kemik mineral yoğunluğunu artırır</li>
+                                            <li>Zihinsel performansı artırır</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Ürün Detayı</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <img src="" alt="Ürün Görseli" class="img-fluid product-image">
+                            </div>
+                            <div class="col-md-6">
+                                <p class="product-description"></p>
+                                <h5 class="mt-4">Faydaları</h5>
+                                <ul class="product-benefits"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <section class="py-5" style="background-color: var(--primary-color);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <h2 class="text-dark mb-3">Ürünlerimiz Hakkında Daha Fazla Bilgi Almak İster misiniz?</h2>
+                        <p class="text-dark mb-0">Arı ürünleri ve faydaları hakkında sorularınız için bizimle iletişime geçin.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-dark btn-lg">İletişime Geç</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

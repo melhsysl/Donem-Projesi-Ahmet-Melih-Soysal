@@ -1,0 +1,135 @@
+/* Galeri Sayfası CSS */
+
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff8dc;
+    padding-top: 40px;
+}
+
+/* Top Banner */
+.top-banner {
+    width: 100%;
+    background-color: #ffd700;
+    color: #000;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 1051;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff8dc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+    border-bottom: 1px solid #d3d3d3;
+    margin-top: 32px;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #893901 !important;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #3d2c1e !important;
+    transform: scale(1.1);
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #5d5d5d !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    background-color: #ffd700;
+    color: #3d2c1e !important;
+}
+
+.nav-link.active {
+    background-color: #ffd700;
+    color: #3d2c1e !important;
+}
+
+/* Galeri Bölümü */
+#galeri {
+    margin-top: 80px;
+}
+
+#galeri h2 {
+    color: #893901;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#galeri p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #5d5d5d;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Galeri Açıklama */
+.gallery-description {
+    background-color: #f8f0e3;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-description h3 {
+    color: #893901;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #3d2c1e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}

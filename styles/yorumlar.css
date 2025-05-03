@@ -1,0 +1,204 @@
+/* Yorumlar Sayfası CSS */
+
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff8dc;
+    padding-top: 40px;
+}
+
+/* Top Banner */
+.top-banner {
+    width: 100%;
+    background-color: #ffd700;
+    color: #000;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 1051;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff8dc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+    border-bottom: 1px solid #d3d3d3;
+    margin-top: 32px;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #893901 !important;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #3d2c1e !important;
+    transform: scale(1.1);
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #5d5d5d !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    background-color: #ffd700;
+    color: #3d2c1e !important;
+}
+
+.nav-link.active {
+    background-color: #ffd700;
+    color: #3d2c1e !important;
+}
+
+/* Yorumlar Bölümü */
+#yorumlar {
+    margin-top: 80px;
+}
+
+#yorumlar h2 {
+    color: #893901;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#yorumlar p.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #5d5d5d;
+}
+
+.testimonial {
+    background-color: #f8f0e3;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial::before {
+    content: '\201C'; /* Açılış tırnak işareti */
+    font-size: 60px;
+    color: rgba(137, 57, 1, 0.2);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: Georgia, serif;
+}
+
+.testimonial-content {
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    padding-left: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    color: #893901;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.author-info p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.rating {
+    color: #ffd700;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Yorum Formu */
+.review-form {
+    background-color: #f8f0e3;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.review-form h3 {
+    color: #893901;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #893901;
+    box-shadow: 0 0 0 0.2rem rgba(137, 57, 1, 0.25);
+}
+
+.btn-submit {
+    background-color: #893901;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #6d2c01;
+}
+
+/* Footer */
+footer {
+    background-color: #3d2c1e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}

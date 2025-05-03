@@ -1,0 +1,168 @@
+/* Üretim Süreci Sayfası CSS */
+
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff8dc;
+    padding-top: 40px;
+}
+
+/* Top Banner */
+.top-banner {
+    width: 100%;
+    background-color: #ffd700;
+    color: #000;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 1051;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff8dc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+    border-bottom: 1px solid #d3d3d3;
+    margin-top: 32px;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #893901 !important;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #3d2c1e !important;
+    transform: scale(1.1);
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #5d5d5d !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    background-color: #ffd700;
+    color: #3d2c1e !important;
+}
+
+.nav-link.active {
+    background-color: #ffd700;
+    color: #3d2c1e !important;
+}
+
+/* Üretim Süreci Bölümü */
+#uretim {
+    margin-top: 80px;
+}
+
+#uretim h2 {
+    color: #893901;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#uretim p.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #5d5d5d;
+}
+
+.process-step {
+    background-color: #f8f0e3;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-step h3 {
+    color: #893901;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    background-color: #893901;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.process-step p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.process-step img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.process-info {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.process-info h3 {
+    color: #893901;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.process-info ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.process-info ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #3d2c1e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}
