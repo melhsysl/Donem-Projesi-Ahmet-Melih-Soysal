@@ -83,6 +83,11 @@ body {
   text-align: center;
 }
 
+/* Center the section title even when text-start class is applied */
+.section-title.text-start {
+  text-align: center !important;
+}
+
 .section-title::after {
   content: '';
   position: absolute;

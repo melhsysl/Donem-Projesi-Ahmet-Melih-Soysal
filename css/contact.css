@@ -1,9 +1,10 @@
 /* Contact Page Styles */
 
 .contact-hero {
-  background-image: url('../images/contact-bg.jpg');
+  background-image: url('../images/main.jpeg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 400px;
   position: relative;
   margin-bottom: 60px;
@@ -34,6 +35,13 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   height: 100%;
   transition: all 0.3s ease;
+}
+
+/* Çalışma saatleri bölümündeki resim için yükseklik sınırlaması */
+.store-hours-img {
+  max-height: 550px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .contact-info-box:hover {

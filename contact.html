@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim | Bal Arısı</title>
+    <title>İletişim | Sevde & BEE</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,8 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/contact.css" type="text/css">
+    
 </head>
 <body>
     <!-- Navbar -->
@@ -45,7 +46,7 @@
                                 <i class="bi bi-geo-alt"></i>
                             </div>
                             <h4 class="text-center mb-3">Adresimiz</h4>
-                            <p class="text-center text-muted">Arı Köyü, Çiçek Vadisi No:123<br>Merkez/Muğla</p>
+                            <p class="text-center text-muted">Sevde Bakliyet<br>Yeni, 66740 Sorgun/Yozgat<br>R55W+P3 Sorgun, Yozgat</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4 fade-in">
@@ -54,7 +55,7 @@
                                 <i class="bi bi-telephone"></i>
                             </div>
                             <h4 class="text-center mb-3">Telefonumuz</h4>
-                            <p class="text-center text-muted">+90 (555) 123 45 67<br>+90 (555) 987 65 43</p>
+                            <p class="text-center text-muted">+90 (505) 351 54 10<br>+90 (501) 152 58 66</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4 fade-in">
@@ -63,7 +64,7 @@
                                 <i class="bi bi-envelope"></i>
                             </div>
                             <h4 class="text-center mb-3">E-posta</h4>
-                            <p class="text-center text-muted">info@balarisi.com<br>siparis@balarisi.com</p>
+                            <p class="text-center text-muted">kelebek097@gmail.com<br>ahmetmelih66@hotmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -77,33 +78,71 @@
                     <div class="col-lg-10">
                         <div class="contact-form-box fade-in">
                             <h2 class="section-title mb-4">Mesaj Gönderin</h2>
-                            <form id="contact-form">
+                            
+                            
+                            <!-- Gizli iframe form gönderimi için -->
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                            
+                            <form action="https://formsubmit.co/kelebek097@gmail.com" method="POST" id="contact-form" target="hidden_iframe" onsubmit="submitted=true;">
+                                <!-- FormSubmit Ayarları (temel ayarlar) -->
+                                <input type="hidden" name="_subject" value="Sevde Bakliyet - Yeni Site Mesajı">
+                                <input type="hidden" name="_captcha" value="false">
+                                
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group mb-3">
                                             <label for="name" class="form-label">Adınız Soyadınız</label>
-                                            <input type="text" class="form-control" id="name" placeholder="Adınız Soyadınız">
+                                            <input type="text" class="form-control" name="name" placeholder="Adınız Soyadınız" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group mb-3">
                                             <label for="email" class="form-label">E-posta Adresiniz</label>
-                                            <input type="email" class="form-control" id="email" placeholder="E-posta Adresiniz">
+                                            <input type="email" class="form-control" name="email" placeholder="E-posta Adresiniz" required>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group mb-3">
                                     <label for="subject" class="form-label">Konu</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Mesajınızın Konusu">
+                                    <input type="text" class="form-control" name="subject" placeholder="Mesajınızın Konusu" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group mb-3">
                                     <label for="message" class="form-label">Mesajınız</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı yazın..."></textarea>
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Mesajınızı yazın..." required></textarea>
                                 </div>
                                 <div class="mt-4">
                                     <button type="submit" class="btn btn-primary btn-lg">Mesaj Gönder</button>
                                 </div>
+                                
+                                <div id="success-message" class="alert alert-success mt-4" style="display: none;">
+                                    <i class="bi bi-check-circle me-2"></i> Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.
+                                </div>
                             </form>
+                            
+                            <script>
+                                // Form gönderimi tamamlandığında çalışacak fonksiyon
+                                var submitted = false;
+                                
+                                // iframe yüklendiğinde kontrol et
+                                document.getElementById('hidden_iframe').onload = function() {
+                                    if(submitted) {
+                                        // Başarı mesajını göster
+                                        const successMessage = document.getElementById('success-message');
+                                        successMessage.style.display = 'block';
+                                        
+                                        // Formu temizle
+                                        document.getElementById('contact-form').reset();
+                                        
+                                        // Submitted durumunu sıfırla
+                                        submitted = false;
+                                        
+                                        // 5 saniye sonra başarı mesajını gizle
+                                        setTimeout(function() {
+                                            successMessage.style.display = 'none';
+                                        }, 5000);
+                                    }
+                                };
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -115,7 +154,7 @@
             <div class="container">
                 <h2 class="section-title mb-4">Bizi Ziyaret Edin</h2>
                 <div class="contact-map fade-in">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.3536579348184!2d28.365363776073775!3d36.97002346431787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bfaf0ba8830093%3A0x1376654a74fc03de!2zTWHFn2xhLCBNdcSfbGE!5e0!3m2!1str!2str!4v1682722644505!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=Sevde+Bakliyet+Sorgun+Yozgat&t=m&z=18&output=embed&iwloc=near" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -173,18 +212,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Kargo ile gönderim yapıyor musunuz?
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Evet, Türkiye'nin her yerine kargo ile gönderim yapıyoruz. Siparişlerinizi telefon veya e-posta yoluyla verebilirsiniz. Kargolama ücreti mesafeye göre değişiklik gösterebilir. Belli bir tutar üzerindeki siparişlerde kargo ücretini biz karşılıyoruz.
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -213,12 +241,12 @@
                         </table>
                         <p class="text-muted">Resmi tatillerde farklı çalışma saatlerimiz olabilir. Ziyaret etmeden önce lütfen arayın.</p>
                         <div class="mt-4">
-                            <a href="tel:+905551234567" class="btn btn-primary me-2"><i class="bi bi-telephone me-2"></i> Hemen Ara</a>
-                            <a href="mailto:info@balarisi.com" class="btn btn-outline-primary"><i class="bi bi-envelope me-2"></i> E-posta Gönder</a>
+                            <a href="tel:+905011525866" class="btn btn-primary me-2"><i class="bi bi-telephone me-2"></i> Hemen Ara</a>
+                            <a href="mailto:kelebek097@gmail.com" class="btn btn-outline-primary"><i class="bi bi-envelope me-2"></i> E-posta Gönder</a>
                         </div>
                     </div>
                     <div class="col-lg-6 fade-in">
-                        <img src="images/contact-image.jpg" alt="Mağazamız" class="img-fluid rounded shadow">
+                        <img src="images/dükkan.jpg" alt="Mağazamız" class="img-fluid rounded shadow store-hours-img">
                     </div>
                 </div>
             </div>
@@ -230,10 +258,9 @@
                 <h2 class="section-title">Sosyal Medyada Bizi Takip Edin</h2>
                 <p class="text-muted mb-4">Etkinliklerimiz, yeni ürünlerimiz ve arıcılık hakkında güncel bilgiler için sosyal medya hesaplarımızı takip edebilirsiniz.</p>
                 <div class="social-media-icons">
-                    <a href="#" class="mx-3 fs-2 text-primary"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="mx-3 fs-2 text-primary"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="mx-3 fs-2 text-primary"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="mx-3 fs-2 text-primary"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.facebook.com/search/top?q=erhan%20soysal&locale=tr_TR" class="mx-3 fs-2 text-primary"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/erhannnnn_66/" class="mx-3 fs-2 text-primary"><i class="bi bi-instagram"></i></a>
+                    
                 </div>
             </div>
         </section>

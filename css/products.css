@@ -1,9 +1,10 @@
 /* Products Page Styles */
 
 .products-hero {
-  background-image: url('../images/products-bg.jpg');
+  background-image: url('../images/main.jpeg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 400px;
   position: relative;
   margin-bottom: 60px;

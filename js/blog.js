@@ -56,11 +56,11 @@ function initStickyBehavior() {
     }
 }
 
-// Filter blog posts by category
-function filterBlogPosts(category) {
+// Filter blog posts by category or tag
+function filterBlogPosts(filterValue) {
     const allPosts = document.querySelectorAll('.blog-card');
     
-    if (category === 'all') {
+    if (filterValue === 'all') {
         allPosts.forEach(post => {
             post.style.display = 'block';
             setTimeout(() => {
@@ -70,7 +70,20 @@ function filterBlogPosts(category) {
         });
     } else {
         allPosts.forEach(post => {
-            if (post.getAttribute('data-category') === category) {
+            // Check if post matches by category
+            const postCategory = post.getAttribute('data-category');
+            
+            // Check if post contains the tag
+            const postTags = post.querySelectorAll('.blog-tag');
+            let hasTag = false;
+            
+            postTags.forEach(tag => {
+                if (tag.textContent.toLowerCase() === filterValue.toLowerCase()) {
+                    hasTag = true;
+                }
+            });
+            
+            if (postCategory === filterValue || hasTag) {
                 post.style.display = 'block';
                 setTimeout(() => {
                     post.style.opacity = '1';
@@ -89,8 +102,16 @@ function filterBlogPosts(category) {
     // Update active class for category links
     document.querySelectorAll('.category-link').forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('data-category') === category) {
+        if (link.getAttribute('data-category') === filterValue) {
             link.classList.add('active');
+        }
+    });
+    
+    // Highlight selected tag
+    document.querySelectorAll('.blog-tag').forEach(tag => {
+        tag.classList.remove('active-tag');
+        if (tag.textContent.toLowerCase() === filterValue.toLowerCase()) {
+            tag.classList.add('active-tag');
         }
     });
 }
